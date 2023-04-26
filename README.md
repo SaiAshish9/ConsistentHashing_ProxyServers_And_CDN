@@ -1,7 +1,8 @@
 ```
 Consistent Hashing:
 
-The problem with load balancing is adding and removing servers which actually changes the local data present at each server.
+The problem with load balancing is adding and removing servers which actually changes the local 
+data present at each server.
 
 To avoid that we can make use of consistent hashing.
 
@@ -15,7 +16,8 @@ we can make use of a ring of hash.
 
 
 ```
-Servers themselves have the ids. We can hash the server ids as well using the hash function and take the remainder by search space (m)
+Servers themselves have the ids. We can hash the server ids as well using the hash function and
+take the remainder by search space (m)
 
 Example:
 Server 1 position = h(0) % 30 = 49 % 30 = 19
@@ -43,11 +45,13 @@ Load Factor on an average turns out to be 1/N on average (expected).
 
 
 ```
-If we've a new server, any req coming there will be served by that server. Earlier that was served by the next nearest server.
+If we've a new server, any req coming there will be served by that server. Earlier that
+was served by the next nearest server.
 
 Change in the servers load will be much lesser than what was there previously.
 
-Lets say s1 goes down , next server will serve the s1's requests. All of the servers will be served by s4.
+Lets say s1 goes down , next server will serve the s1's requests.
+All of the servers will be served by s4.
 
 We'll have half of the load on a single server.
 
@@ -74,6 +78,16 @@ https://www.youtube.com/watch?v=8zX0rue2Hic
 
 ```
 Whenever the user needs to connect to the server, it hits the server and asks for the HTML page.
+
+This will cause the following issues:
+1. Data Path is Long.
+2. File type depends on user device.
+3. 
+4. 
+
+In order to fix this, we want to have:
+1. Caching
+2. Customized Data (Device, Location)
 ```
 
 <img width="1107" alt="Screenshot 2023-04-27 at 2 42 12 AM" src="https://user-images.githubusercontent.com/43849911/234703853-5fd9296d-e0e6-47e3-9fa8-94fb45ff413a.png">
