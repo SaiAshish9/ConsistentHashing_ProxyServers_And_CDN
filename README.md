@@ -87,10 +87,47 @@ In order to fix this, we want to have:
 1. Caching
 2. Customized Data (Device, Location)
 3. Fast web page serving
-4. 
+
+When we search something at google search, we want data to be retrieved fast otherwise it will be irritating.
 ```
 
 <img width="1107" alt="Screenshot 2023-04-27 at 2 42 12 AM" src="https://user-images.githubusercontent.com/43849911/234703853-5fd9296d-e0e6-47e3-9fa8-94fb45ff413a.png">
 
 <img width="1204" alt="Screenshot 2023-04-27 at 2 45 30 AM" src="https://user-images.githubusercontent.com/43849911/234704503-3e8a96cc-fb5e-4d1a-8e3e-1cab59f950b8.png">
 
+
+```
+Before the server, we can have a another entity called global cache.
+The cache is a single point of failure.
+
+If that crashes, everything crashes. To solve this we can have a distributed cache.
+
+And based on the location, we can shard horizontally. In this way we can reduce the latency.
+
+In a distributed system, we should have access to the source of truth.
+
+It will be difficult to make sure that the cache has following properties:
+1. Available in different countries
+2. Follows regulations 
+3. Serves the latest content
+
+CDN takes care of all that stuff. 
+
+Most popular CDN is the AWS CloudFront 
+```
+
+<img width="1293" alt="Screenshot 2023-04-27 at 3 08 16 AM" src="https://user-images.githubusercontent.com/43849911/234708674-b0fe7778-700f-46eb-bbd1-74fbbe927ea2.png">
+
+<img width="1168" alt="Screenshot 2023-04-27 at 2 59 47 AM" src="https://user-images.githubusercontent.com/43849911/234707292-2132e46a-4bcf-44f6-b69a-3371c5512638.png">
+
+<img width="1078" alt="Screenshot 2023-04-27 at 3 00 02 AM" src="https://user-im![Uploading Screenshot 2023-04-27 at 3.08.00 AM.png…]()
+ages.githubusercontent.com/43849911/234707330-435c8bb9-45c9-459f-95b2-0088fc1e28e3.png">
+
+<img width="1086" alt="Screenshot 2023-04-27 at 3 03 27 AM" src="https://user-images.githubusercontent.com/43849911/234707927-79e0543d-9851-4256-8235-ce4f350edfeb.png">
+
+```
+CloudFront is :
+1. SuperCheap.
+2. Very reliable.
+3. Easy to use.
+```
