@@ -25,6 +25,41 @@ Various servers will be hashed this way.
 Whenever request comes in to the ring, we'll go clockwise and find the nearest server.
 
 That server will be serving that request.
+
+Hence, one server can serve multiple requests depending upon the circular position.
+
+For example, S1 can have a load of 2 requests.
+
+Since the hashes are uniform, requests will be uniformed and the load as well.
 ```
 
 <img width="850" alt="Screenshot 2023-04-27 at 12 35 07 AM" src="https://user-images.githubusercontent.com/43849911/234677406-a79d41c1-cdc4-4e83-8de4-e3d74cd29094.png">
+
+<img width="828" alt="Screenshot 2023-04-27 at 12 38 17 AM" src="https://user-images.githubusercontent.com/43849911/234678114-d0b6283e-8486-451d-97d0-7bc2d1d9f82c.png">
+
+```
+Load Factor on an average turns out to be 1/N on average (expected).
+```
+
+
+```
+If we've a new server, any req coming there will be served by that server. Earlier that was served by the next nearest server.
+
+Change in the servers load will be much lesser than what was there previously.
+
+Lets say s1 goes down , next server will serve the s1's requests. All of the servers will be served by s4.
+
+We'll have half of the load on a single server.
+
+We can have multiple hash functions to solve this.
+
+If we choose the k effectively, we can entirely remove the load on one of the service.
+
+As load is expected to be distributed uniformly.
+```
+
+<img width="859" alt="Screenshot 2023-04-27 at 12 43 13 AM" src="https://user-images.githubusercontent.com/43849911/234679174-c93669d6-0596-42c5-b753-c078b2d21c9e.png">
+
+<img width="984" alt="Screenshot 2023-04-27 at 12 51 57 AM" src="https://user-images.githubusercontent.com/43849911/234681044-e0f82e09-dee2-46ca-ad96-b6bfef32e5fd.png">
+
+Consistent Hashing is used by web caches, databases, and effective load balancing. 
