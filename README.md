@@ -78,4 +78,5 @@ Whenever the user needs to connect to the server, it hits the server and asks fo
 
 <img width="1107" alt="Screenshot 2023-04-27 at 2 42 12 AM" src="https://user-images.githubusercontent.com/43849911/234703853-5fd9296d-e0e6-47e3-9fa8-94fb45ff413a.png">
 
+<img width="1204" alt="Screenshot 2023-04-27 at 2 45 30 AM" src="https://user-images.githubusercontent.com/43849911/234704503-3e8a96cc-fb5e-4d1a-8e3e-1cab59f950b8.png">
 
