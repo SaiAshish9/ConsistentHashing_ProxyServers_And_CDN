@@ -62,4 +62,20 @@ As load is expected to be distributed uniformly.
 
 <img width="984" alt="Screenshot 2023-04-27 at 12 51 57 AM" src="https://user-images.githubusercontent.com/43849911/234681044-e0f82e09-dee2-46ca-ad96-b6bfef32e5fd.png">
 
+```
 Consistent Hashing is used by web caches, databases, and effective load balancing. 
+```
+
+```
+CDNs
+
+https://www.youtube.com/watch?v=8zX0rue2Hic
+```
+
+```
+Whenever the user needs to connect to the server, it hits the server and asks for the HTML page.
+```
+
+<img width="1107" alt="Screenshot 2023-04-27 at 2 42 12 AM" src="https://user-images.githubusercontent.com/43849911/234703853-5fd9296d-e0e6-47e3-9fa8-94fb45ff413a.png">
+
+
